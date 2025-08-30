@@ -1,0 +1,29 @@
+🧩 Assignment 1: Real-Time Price Ticker Using Channels
+Concepts to Use:
+goroutine
+channel
+select
+time.Sleep or ticker
+Problem Statement:
+Simulate a live stock price feed using channels. You are given a list of tickers with simulated prices. Each stock ticker sends a new price every second. Your job is to print the updates to console in real-time.
+Expected Behavior:
+Create a goroutine per ticker
+Use a channel to send price updates
+Use select to print them as they arrive
+Sample Input:
+go
+CopyEdit
+tickers := []string{"AAPL", "GOOG", "INFY"}
+Sample Output (randomized per ticker):
+yaml
+CopyEdit
+[10:01:01] AAPL: 172.56
+[10:01:01] GOOG: 2875.22
+[10:01:01] INFY: 1400.03
+[10:01:02] AAPL: 172.60
+[10:01:02] INFY: 1400.08
+...
+Constraints:
+Prices can be random or incrementing values.
+Ensure safe termination using context or stop after 10 seconds.
+🧩 Assignment 2: Portfolio Tracker Using GORM
